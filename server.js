@@ -14,9 +14,10 @@ require('dotenv').config({path: './config/.env'})
 
 // Passport config
 require('./config/passport')(passport)
-
+ 
+/*
 connectDB()
-
+*/
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
@@ -31,7 +32,8 @@ app.use(
       store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
   )
-  
+  //TEST COMMENT
+  // MICHAEL REYNA
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
@@ -43,4 +45,4 @@ app.use('/todos', todoRoutes)
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
-})    
+})
