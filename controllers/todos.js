@@ -5,16 +5,17 @@ module.exports = {
         console.log(req.user)
         try{
             const todoItems = await Todo.find({userId:req.user.id})
-            //const AdminItems = await Todo.find()
+            const AdminItems = await Todo.find()
             const itemsLeft = await 
               
           Todo.countDocuments({userId:req.user.id,completed: false})
 
-          //if (user.email == "floor7table15@gmail.com")
-            //res.render('todos.ejs', {todos: AdminItems, left: itemsLeft, user: req.user})
-          //else (if student)
+          if (req.user.email == "floor7table15@gmail.com"){
+            res.render('todos.ejs', {todos: AdminItems, left: itemsLeft, user: req.user})}
+          else {
             res.render('todos.ejs', {todos: todoItems, left: itemsLeft, user: req.user})
         }
+    }
         
         
         catch(err){
