@@ -8,24 +8,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Books to Read</h1>
-    <ul>
+  <section class="section-spacing center-content">
+    <h1 class="title">Book Collection</h1>
+    <h2 class="subtitle"><%= user.userName %> has <%= left %> books left to read.</h2>
+
+    <form action="/todos/createTodo" method='POST'>
+      <input class="input-search" type="text" placeholder="Enter Book Title Here" name='todoItem'>
+      <input class="cursor button" type="submit" value="Log Book">
+    </form>
+    <a href="/logout"><button class="cursor button logout-spacing" type="button">Logout</button></a>
+  </section>
+
+    <section class="layout-grid section-spacing">
+      <% todos.forEach( el => { %>
+          <div> 
+            <div class="layout-card">
+              <div data-id='<%=el._id%>' class='todoItem card-box center-content'>
+                <span class="cursor <%= el.completed === true ? 'completed' : 'not'%>"><h2><%= el.todo %></h2></span>
+                <div class='del'>
+                  <span class="cursor">Remove Book &#x1F5D1 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>    
+    </section>
+    <!--<ul>
+
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='del'> &#x1F5D1 </span>
             </li>
             <% }) %>    
-    </ul>
-
-    <h2><%= user.userName %> has <%= left %> books left to read.</h2>
-
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Book Title Here" name='todoItem'>
-        <input type="submit">
-    </form>
-
-    <a href="/logout"><button type="button">Logout</button></a>
+    </ul>-->
 
     <script src="js/main.js"></script>
 </body>
