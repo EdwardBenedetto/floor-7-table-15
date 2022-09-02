@@ -13,7 +13,7 @@
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> X </span>
+                <span class='del'> x </span>
             </li>
             <% }) %>    
     </ul>
@@ -25,7 +25,7 @@
         <input type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout"><button type="button">LOGOUT</button></a>
 
     <script src="js/main.js"></script>
 </body>
