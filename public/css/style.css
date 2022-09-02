@@ -112,3 +112,89 @@ h1 {
   transition: 0.5s;
   color: white;
 }
+
+
+
+.signUpPage {
+  background-color: grey;
+}
+
+.signup-box {
+  width: 360px;
+  height: 620px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.welcome { 
+  text-align: center;
+  padding-top: 15px;
+}
+
+h2{
+  text-align: center;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+
+form .username {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+form .email {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+form .password {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+form .confirm-password {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+
+#submit-button {
+  width: 375px;
+  height: 35px;
+  margin-top: 20px;
+  border: 1px solid rgb(94, 95, 94);
+  border-radius: 6px;
+  background-color: #808583;
+  color: white;
+  font-size: 16px;
+}
+
+#submit-button:hover{
+  color: black;
+}
+
+.alert-danger {
+  text-align: center;
+}
