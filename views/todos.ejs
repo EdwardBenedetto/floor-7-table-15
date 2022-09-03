@@ -10,7 +10,13 @@
 <body>
   <section class="section-spacing center-content">
     <h1 class="title">Book Collection</h1>
-    <h2 class="subtitle"><%= user.userName %> has <%= left %> books left to read.</h2>
+    
+    <% if(user.email == "floor7table15@gmail.com"){ %>
+      <h2 class="subtitle">Your students have a total of <%= left %> books left to read.</h2>
+    <% } else{ %>  
+      <h2 class="subtitle"><%= user.userName %> has <%= left %> books left to read.</h2>
+   <% } %>
+
 
     <form action="/todos/createTodo" method='POST'>
       <input class="input-search" type="text" placeholder="Enter Book Title Here" name='todoItem'>

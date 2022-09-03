@@ -6,12 +6,11 @@ module.exports = {
         try{
             const todoItems = await Todo.find({userId:req.user.id})
             const AdminItems = await Todo.find()
-            const itemsLeft = await 
-              
-          Todo.countDocuments({userId:req.user.id,completed: false})
+            const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
+            const AdminLeft = await Todo.countDocuments({completed: false})
 
           if (req.user.email == "floor7table15@gmail.com"){
-            res.render('todos.ejs', {todos: AdminItems, left: itemsLeft, user: req.user})}
+            res.render('todos.ejs', {todos: AdminItems, left: AdminLeft, user: req.user})}
           else {
             res.render('todos.ejs', {todos: todoItems, left: itemsLeft, user: req.user})
         }
