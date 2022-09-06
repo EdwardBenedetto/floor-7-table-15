@@ -1,0 +1,50 @@
+/* Author: Colin (Github: https://github.com/cohau/) */
+
+body{
+  text-align: center;
+/*   background-color:white; */
+  padding-top:2rem;
+  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2580&q=80")
+}
+
+h1{
+  color:white;
+  font-size:70px;
+}
+
+.loginBox{
+  border: 3px solid darkgray;
+  background-color: lightcyan;
+  width:360px;
+  margin:auto;
+  margin-top:3rem;
+  padding:2rem;
+}
+
+form{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  width:100%;
+  gap:0.5rem;
+}
+
+body > div > form > input{
+  padding:10px;
+  border: 1px solid grey;
+  border-radius:4px;
+}
+
+button{
+  background-color:white;
+  font-size:16px;
+  border: 1px solid grey;
+  border-radius:10px;
+  padding:10px;
+  width:195px;
+  font-weight:bold;
+}
+button:hover{
+  background-color:lightblue;
+  border: 1px solid lightblue;
+}
